@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kareem's Portfolio</title>
+
+  <!-- Font (premium feel) -->
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Three.js CDN -->
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+</head>
+<body>
+  <!-- Custom cursor -->
+  <div class="custom-cursor" aria-hidden="true"></div>
+
+  <!-- Navigation dots -->
+  <nav class="nav-dots" aria-label="Section navigation">
+    <button class="nav-dot active" data-section="hero" aria-label="Go to Intro"></button>
+    <button class="nav-dot" data-section="work" aria-label="Go to Featured Work"></button>
+    <button class="nav-dot" data-section="about" aria-label="Go to About"></button>
+    <button class="nav-dot" data-section="skills" aria-label="Go to Skills"></button>
+    <button class="nav-dot" data-section="more" aria-label="Go to When I'm Not Coding"></button>
+    <button class="nav-dot" data-section="contact" aria-label="Go to Contact"></button>
+  </nav>
+
+  <!-- Three.js canvas lives here -->
+  <div id="canvas-container" aria-hidden="true"></div>
+
+  <!-- Content -->
+  <main class="content">
+
+    <!-- HERO -->
+    <section id="hero" class="section hero">
+      <div class="stack">
+        <h1 class="fade-target">Abdul Kareem</h1>
+        <p class="subtitle fade-target">Full-Stack Developer focused on clean UI, AI-assisted features, and scalable application design.</p>
+
+        <div class="cta fade-target">
+          <a href="#work" class="btn btn-primary" id="view-work">View My Work</a>
+
+          <!-- Download: place AbdulKareem.pdf in same folder -->
+          <a class="btn btn-ghost" href="AbdulKareem.pdf" download>
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="section">
+      <header class="section-header fade-target">
+        <h2>Featured Work</h2>
+        <p>Each project highlights my ability to plan, build, and ship full-stack applications that solve real user needs.</p>
+      </header>
+
+      <div class="project-grid">
+        <article class="project-card fade-target">
+          <h3>Typing Speed Game</h3>
+          <p>A fun, responsive typing game with levels, timers and clean UI.</p>
+          <a class="link" href="https://typecraft-three.vercel.app/" target="_blank" rel="noreferrer">Play Game</a>
+        </article>
+
+        <article class="project-card fade-target">
+          <h3>Font Converter Tool</h3>
+          <p>Instantly convert text into multiple aesthetic font styles.</p>
+          <a class="link" href="https://fontconverter-gamma.vercel.app/" target="_blank" rel="noreferrer">Try Tool</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <header class="section-header fade-target">
+        <h2>About Me</h2>
+      </header>
+      <div class="about-content fade-target">
+        <p>
+          I’m a Full-Stack Web Developer who loves turning ideas into clean, useful products.
+          I focus on thoughtful UI, smooth UX, and scalable architectures that hold up in the real world.
+          Recently I’ve been adding **AI-powered** features to everyday apps to make them faster, smarter, and more helpful for users.
+        </p>
+        <p>
+          My style is calm and detail-oriented: readable code, sensible abstractions, and performance that doesn’t get in the way.
+          I care about building things that feel premium, ship reliably, and age well.
+        </p>
+        <p class="muted">
+          Just a developer trying to build things that feel good today and still make sense tomorrow.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <header class="section-header fade-target">
+        <h2>Technical Skills</h2>
+      </header>
+      <div class="skills-grid fade-target">
+        <span class="skill">React</span>
+        <span class="skill">Next.js</span>
+        <span class="skill">Node.js</span>
+        <span class="skill">Express</span>
+        <span class="skill">MongoDB</span>
+        <span class="skill">TypeScript</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Tailwind</span>
+        <span class="skill">CSS</span>
+        <span class="skill">HTML</span>
+        <span class="skill">Git</span>
+        <span class="skill">GitHub</span>
+        <span class="skill">Linux</span>
+        <span class="skill">Postman</span>
+      </div>
+    </section>
+
+    <!-- WHEN NOT CODING -->
+    <section id="more" class="section">
+      <header class="section-header fade-target">
+        <h2>When I’m Not Coding</h2>
+      </header>
+      <div class="about-content fade-target">
+        <p>
+          I’m usually learning something new — a framework, a design pattern, or a concept I’ve been curious about.
+          I like experimenting with ideas, building small real-world projects, and practicing until everything clicks.
+          It’s how I stay curious, grow consistently, and improve the things I create.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <header class="section-header fade-target">
+        <h2>Let’s Connect</h2>
+        <p>Whether it’s feedback, an idea, or a project — I’m always happy to talk.</p>
+      </header>
+
+      <div class="contact-row fade-target">
+        <a class="btn btn-ghost" href="mailto:abdulkareeem2006@gmail.com">Email</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/abdul-kareem-045a03364" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/Abdulkareem025" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/kareem.code/" target="_blank" rel="noreferrer">Instagram</a>
+      </div>
+
+      <footer class="footer fade-target">
+        © <span id="year"></span> Abdul Kareem. All rights reserved.
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
