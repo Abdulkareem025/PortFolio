@@ -222,15 +222,3 @@ body{
     gap: 12px;
   }
 }
-
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-
-  .section-subtitle {
-    font-size: 1rem;
-    text-align: center;
-  }
-}
